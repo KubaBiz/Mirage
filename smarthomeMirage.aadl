@@ -1,0 +1,101 @@
+package smarthomeMirage
+public
+	data Movement_Type
+    end Movement_Type;
+
+    data Luminance_Type
+    end Luminance_Type;
+
+    data Switch_Type
+    end Switch_Type;
+
+    data Percentage_Type
+    end Percentage_Type;
+    
+    -- Movement Sensor Interface
+    device Movement_Sensor
+    features
+        movement_out: out data port Movement_Type;
+    end Movement_Sensor;
+
+    -- Luminance Sensor Interface
+    device Luminance_Sensor
+    features
+        luminance_out: out data port Luminance_Type;
+    end Luminance_Sensor;
+
+    -- Switch Device Interface
+    device Switch_Device
+    features
+        switch_out: out data port Switch_Type;
+    end Switch_Device;
+
+    -- Light Controller Interface
+    device Light_Controller
+    features
+        movement_in: in data port Movement_Type;
+        luminance_in: in data port Luminance_Type;
+        switch_in: in data port Switch_Type;
+        light_out: out data port Percentage_Type;
+    end Light_Controller;
+
+    -- Light Switch Interface
+    device Light_Switch
+    features
+        percentage_in: in data port Percentage_Type;
+    end Light_Switch;
+    
+    
+    -- Processor
+    processor Main_Processor
+    end Main_Processor;
+
+    processor implementation Main_Processor.impl
+    end Main_Processor.impl;
+
+    -- Bus
+    bus System_Bus
+    end System_Bus;
+
+    bus implementation System_Bus.impl
+    end System_Bus.impl;
+
+    -- Memory
+    memory Main_Memory
+    end Main_Memory;
+
+    memory implementation Main_Memory.impl
+    end Main_Memory.impl;
+    
+    
+    system Intelligent_House
+    end Intelligent_House;
+
+    system implementation Intelligent_House.impl
+    subcomponents
+        -- Sensors and devices
+        movement_sensor: device Movement_Sensor;
+        luminance_sensor: device Luminance_Sensor;
+        switch_device: device Switch_Device;
+        light_controller: device Light_Controller;
+        light_switch: device Light_Switch;
+
+        -- Hardware components
+        Main_Proc : processor Main_Processor.impl;
+        Main_Bus: bus System_Bus.impl;
+        Main_Memory: memory Main_Memory.impl;
+    connections
+        -- Connect sensors and switch to the controller
+        movement_conn: port movement_sensor.movement_out -> light_controller.movement_in;
+        luminance_conn: port luminance_sensor.luminance_out -> light_controller.luminance_in;
+        switch_conn: port switch_device.switch_out -> light_controller.switch_in;
+
+        -- Connect controller to the light switch
+        light_conn: port light_controller.light_out -> light_switch.percentage_in;
+
+        -- Hardware connections
+        -- proc_bus_conn: bus access Main_Proc -> Main_Bus;
+        -- mem_bus_conn: bus access Main_Memory -> Main_Bus;
+    end Intelligent_House.impl;
+    
+end smarthomeMirage;
