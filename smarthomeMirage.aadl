@@ -1,48 +1,123 @@
 package smarthomeMirage
 public
-	data Movement_Type
-    end Movement_Type;
+	
+	-- imports --
+	with SEI;
+	with Data_Model;
+	with Base_Types;
+	-- end imports --
+	
+	-- data types
+	data IsMovement
+		properties
+			Data_Model::Data_Representation => Boolean;
+			Data_Size => 1 Bytes;
+    end IsMovement;
+    
+    data LightIntensity
+    	properties
+    		Data_Model::Data_Representation => Fixed;
+    		Data_Model::Measurement_Unit => "Lux";
+    		Data_Size => 12 Bytes;
+    end LightIntensity;
+	
+	data SwitchType
+		properties
+			-- Data_Model::Enumerators => ("On", "Off", "Auto");
+			-- Data_Size => 2 Bytes;
+			Data_Model::Data_Representation => Boolean;
+			Data_Size => 1 Bytes;
+    end SwitchType;
+    
+    data LightPercentage
+    	properties
+    		Data_Model::Data_Representation => Integer;
+    		Data_Model::Measurement_Unit => "Percent";
+    		Data_Size => 10 Bytes;
+    end LightPercentage;
+    
+    data Temperature
+    	properties
+    		Data_Model::Data_Representation => Fixed;
+    		Data_Model::Measurement_Unit => "Percent";
+    		Data_Size => 8 Bytes;
+    end Temperature;
+    
+    data ACMode
+    	properties
+    		Data_Model::Enumerators => ("Cooling", "Heating", "Fan", "Dry", "Auto", "Eco", "Sleep", "Turbo");
+    		Data_Size => 3 Bytes;	
+    end ACMode;
+    
+    data SwitchTemperature
+   		
+    end SwitchTemperature;
+    
+    data Temperature_Adjustment
+    	properties
+        	Data_Model::Data_Representation => Integer;
+        	Data_Model::Integer_Range => -100 .. 100;
+        	Data_Size => 8 Bytes;
+    end Temperature_Adjustment;
+	-- end data types --
+	
+	-- processes --
+	
+	
+	-- end processes --
+	
+	-- threads --
+	
+	
+	-- end threads --
+	
+	-- devices --
+	
+	
+	-- end devices --
+	
+	-- bus, memory, processor --
+	
+	
+	-- end bus, memory, processor --
+	
+	-- system --
+	
+	
+	-- end system -- 
 
-    data Luminance_Type
-    end Luminance_Type;
-
-    data Switch_Type
-    end Switch_Type;
-
-    data Percentage_Type
-    end Percentage_Type;
     
     -- Movement Sensor Interface
     device Movement_Sensor
     features
-        movement_out: out data port Movement_Type;
+        movement_out: out data port IsMovement;
     end Movement_Sensor;
 
     -- Luminance Sensor Interface
     device Luminance_Sensor
     features
-        luminance_out: out data port Luminance_Type;
+        luminance_out: out data port LightIntensity;
     end Luminance_Sensor;
 
     -- Switch Device Interface
     device Switch_Device
     features
-        switch_out: out data port Switch_Type;
+        switch_out: out data port SwitchType;
     end Switch_Device;
 
     -- Light Controller Interface
     device Light_Controller
     features
-        movement_in: in data port Movement_Type;
-        luminance_in: in data port Luminance_Type;
-        switch_in: in data port Switch_Type;
-        light_out: out data port Percentage_Type;
+        movement_in: in data port IsMovement;
+        luminance_in: in data port LightIntensity;
+        switch_in: in data port SwitchType;
+        light_out: out data port LightPercentage;
     end Light_Controller;
 
     -- Light Switch Interface
     device Light_Switch
     features
-        percentage_in: in data port Percentage_Type;
+        percentage_in: in data port LightPercentage;
     end Light_Switch;
     
     
