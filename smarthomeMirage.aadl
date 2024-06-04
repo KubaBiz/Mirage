@@ -11,68 +11,218 @@ public
 	data IsMovement
 		properties
 			Data_Model::Data_Representation => Boolean;
-			Data_Size => 1 Bytes;
+			Data_Size => 1 Bits;
     end IsMovement;
     
     data LightIntensity
     	properties
     		Data_Model::Data_Representation => Fixed;
     		Data_Model::Measurement_Unit => "Lux";
-    		Data_Size => 12 Bytes;
+    		Data_Size => 12 Bits;
     end LightIntensity;
 	
-	data SwitchType
+	data SwitchLight
 		properties
-			-- Data_Model::Enumerators => ("On", "Off", "Auto");
-			-- Data_Size => 2 Bytes;
-			Data_Model::Data_Representation => Boolean;
-			Data_Size => 1 Bytes;
-    end SwitchType;
+			Data_Model::Enumerators => ("On", "Off", "Auto");
+			Data_Size => 2 Bits;
+    end SwitchLight;
     
     data LightPercentage
     	properties
     		Data_Model::Data_Representation => Integer;
     		Data_Model::Measurement_Unit => "Percent";
-    		Data_Size => 10 Bytes;
+    		Data_Size => 10 Bits;
     end LightPercentage;
+    
     
     data Temperature
     	properties
     		Data_Model::Data_Representation => Fixed;
-    		Data_Model::Measurement_Unit => "Percent";
-    		Data_Size => 8 Bytes;
+    		Data_Model::Measurement_Unit => "degree Celsius";
+    		Data_Size => 8 Bits;
     end Temperature;
-    
-    data ACMode
-    	properties
-    		Data_Model::Enumerators => ("Cooling", "Heating", "Fan", "Dry", "Auto", "Eco", "Sleep", "Turbo");
-    		Data_Size => 3 Bytes;	
-    end ACMode;
+
+    data Humidity
+        properties
+            Data_Model::Data_Representation => Integer;
+            Data_Model::Measurement_Unit => "Percent";
+    		Data_Size => 7 Bits;
+    end Humidity;
     
     data SwitchTemperature
-   		
+   		properties
+    		Data_Model::Enumerators => ("Sleep", "Fan", "Eco", "Normal", "Turbo");
+    		Data_Model::Data_Representation => Fixed;
+            Data_Model::Measurement_Unit => "degree Celsius";
+    		Data_Size => 11 Bits;	
     end SwitchTemperature;
     
-    data Temperature_Adjustment
+    data TemperatureAdjustment
     	properties
         	Data_Model::Data_Representation => Integer;
         	Data_Model::Integer_Range => -100 .. 100;
         	Data_Size => 8 Bytes;
-    end Temperature_Adjustment;
+    end TemperatureAdjustment;
+    
+
+    data SwitchAlarm
+        properties
+            Data_Model::Data_Representation => Boolean;
+            Data_Size => 1 Bits;
+    end SwitchAlarm;
+
+    data TurnOn
+        properties
+            Data_Model::Data_Representation => Boolean;
+            Data_Size => 1 Bits;
+    end TurnOn;
+
 	-- end data types --
 	
 	-- processes --
 	
+    process LightController
+        features
+            receive_movement_in: in data port IsMovement;
+            receive_luminance_in : in data port LightIntensity;
+            send_light_percent_out: out data port LightPercentage;
+    end LightController;
+
+    process implementation LightController.impl
+        subcomponents
+            sensorsThread: thread LightSensorsThread.impl;
+            switchThread: thread LightSwitchThread.impl;
+        connections
+            c1: port receive_luminance_in -> sensorsThread.luminance_in;
+            c2: port receive_movement_in -> sensorsThread.movement_in;
+            c3: port sensorsThread.light_percent_out -> switchThread.light_percent_in;
+    end LightController.impl;
+
+
+--    process AlarmController
+--
+--    end AlarmController
+--
+--    process implementation AlarmController.impl
+--
+--    end AlarmController.impl
+--
+--
+--    process TemperatureController
+--
+--    end TemperatureController
+--
+--    process implementation TemperatureController.impl
+--
+--    end TemperatureController.impl
 	
 	-- end processes --
 	
 	-- threads --
 	
+    thread LightSensorsThread
+        features
+            movement_in: in data port IsMovement;
+            luminance_in: in data port LightIntensity;
+            light_percent_out: out data port LightPercentage;
+        properties
+            SEI::MIPSBudget => 10.0 mips;
+            Thread_Properties::Dispatch_Protocol => Sporadic;
+			Timing_Properties::Period => 1000ms;
+    end LightSensorsThread;
+
+    thread implementation LightSensorsThread.impl
+    end LightSensorsThread.impl;
+
+    thread LightSwitchThread
+        features
+            light_switch_in: in data port SwitchLight;
+            light_percent_in: in data port LightPercentage;
+            light_percent_out: out data port LightPercentage;
+        properties
+            SEI::MIPSBudget => 5.0 mips;
+            Thread_Properties::Dispatch_Protocol => Periodic;
+            Timing_Properties::Period => 50ms;
+    end LightSwitchThread;
+
+    thread implementation LightSwitchThread.impl
+    end LightSwitchThread.impl;
+
+
+    thread AlarmThread
+        features
+            movement_in: in data port IsMovement;
+            alarm_switch_in: in data port SwitchAlarm;
+            turn_on_out: out data port TurnOn;
+        properties
+            SEI::MIPSBudget => 5.0 mips;
+            Thread_Properties::Dispatch_Protocol => Periodic;
+            Timing_Properties::Period => 100ms; 
+    end AlarmThread;
+
+    thread implementation AlarmThread.impl
+    end AlarmThread.impl;
+
+    thread AirConditionerThread
+        features
+            humidity_in: in data port Humidity;
+            temperature_in: in data port Temperature;
+            switch_temperature_in: in data port SwitchTemperature;
+            temperature_adjustment_out: out data port TemperatureAdjustment;
+        properties
+            SEI::MIPSBudget => 15.0 mips;
+            Thread_Properties::Dispatch_Protocol => Periodic;
+			Timing_Properties::Period => 50ms;
+    end AirConditionerThread;
+
+    thread implementation AirConditionerThread.impl
+    end AirConditionerThread.impl;
 	
 	-- end threads --
 	
 	-- devices --
 	
+    device MovementSensor
+
+    end MovementSensor;
+
+    device LuminanceSensor
+
+    end LuminanceSensor;
+
+    device LightSwitch
+
+    end LightSwitch;
+
+    device LightDevice
+
+    end LightDevice;
+
+
+    device HumiditySensor
+
+    end HumiditySensor;
+
+    device TemperatureSensor
+
+    end TemperatureSensor;
+
+    device TemperatureSwitch
+
+    end TemperatureSwitch;
+
+    device AirConditioner
+
+    end AirConditioner;
+
+
+    device AlarmSwitch
+
+    end AlarmSwitch;
+
+    device Speaker
+
+    end Speaker;
 	
 	-- end devices --
 	
@@ -87,90 +237,90 @@ public
 	-- end system -- 
 
     
-    -- Movement Sensor Interface
-    device Movement_Sensor
-    features
-        movement_out: out data port IsMovement;
-    end Movement_Sensor;
-
-    -- Luminance Sensor Interface
-    device Luminance_Sensor
-    features
-        luminance_out: out data port LightIntensity;
-    end Luminance_Sensor;
-
-    -- Switch Device Interface
-    device Switch_Device
-    features
-        switch_out: out data port SwitchType;
-    end Switch_Device;
-
-    -- Light Controller Interface
-    device Light_Controller
-    features
-        movement_in: in data port IsMovement;
-        luminance_in: in data port LightIntensity;
-        switch_in: in data port SwitchType;
-        light_out: out data port LightPercentage;
-    end Light_Controller;
-
-    -- Light Switch Interface
-    device Light_Switch
-    features
-        percentage_in: in data port LightPercentage;
-    end Light_Switch;
-    
-    
-    -- Processor
-    processor Main_Processor
-    end Main_Processor;
-
-    processor implementation Main_Processor.impl
-    end Main_Processor.impl;
-
-    -- Bus
-    bus System_Bus
-    end System_Bus;
-
-    bus implementation System_Bus.impl
-    end System_Bus.impl;
-
-    -- Memory
-    memory Main_Memory
-    end Main_Memory;
-
-    memory implementation Main_Memory.impl
-    end Main_Memory.impl;
-    
-    
-    system Intelligent_House
-    end Intelligent_House;
-
-    system implementation Intelligent_House.impl
-    subcomponents
-        -- Sensors and devices
-        movement_sensor: device Movement_Sensor;
-        luminance_sensor: device Luminance_Sensor;
-        switch_device: device Switch_Device;
-        light_controller: device Light_Controller;
-        light_switch: device Light_Switch;
-
-        -- Hardware components
-        Main_Proc : processor Main_Processor.impl;
-        Main_Bus: bus System_Bus.impl;
-        Main_Memory: memory Main_Memory.impl;
-    connections
-        -- Connect sensors and switch to the controller
-        movement_conn: port movement_sensor.movement_out -> light_controller.movement_in;
-        luminance_conn: port luminance_sensor.luminance_out -> light_controller.luminance_in;
-        switch_conn: port switch_device.switch_out -> light_controller.switch_in;
-
-        -- Connect controller to the light switch
-        light_conn: port light_controller.light_out -> light_switch.percentage_in;
-
-        -- Hardware connections
-        -- proc_bus_conn: bus access Main_Proc -> Main_Bus;
-        -- mem_bus_conn: bus access Main_Memory -> Main_Bus;
-    end Intelligent_House.impl;
-    
+--    -- Movement Sensor Interface
+--    device Movement_Sensor
+--    features
+--        movement_out: out data port IsMovement;
+--    end Movement_Sensor;
+--
+--    -- Luminance Sensor Interface
+--    device Luminance_Sensor
+--    features
+--        luminance_out: out data port LightIntensity;
+--    end Luminance_Sensor;
+--
+--    -- Switch Device Interface
+--    device Switch_Device
+--    features
+--        switch_out: out data port SwitchType;
+--    end Switch_Device;
+--
+--    -- Light Controller Interface
+--    device Light_Controller
+--    features
+--        movement_in: in data port IsMovement;
+--        luminance_in: in data port LightIntensity;
+--        switch_in: in data port SwitchType;
+--        light_out: out data port LightPercentage;
+--    end Light_Controller;
+--
+--    -- Light Switch Interface
+--    device Light_Switch
+--    features
+--        percentage_in: in data port LightPercentage;
+--    end Light_Switch;
+--    
+--    
+--    -- Processor
+--    processor Main_Processor
+--    end Main_Processor;
+--
+--    processor implementation Main_Processor.impl
+--    end Main_Processor.impl;
+--
+--    -- Bus
+--    bus System_Bus
+--    end System_Bus;
+--
+--    bus implementation System_Bus.impl
+--    end System_Bus.impl;
+--
+--    -- Memory
+--    memory Main_Memory
+--    end Main_Memory;
+--
+--    memory implementation Main_Memory.impl
+--    end Main_Memory.impl;
+--    
+--    
+--    system Intelligent_House
+--    end Intelligent_House;
+--
+--    system implementation Intelligent_House.impl
+--    subcomponents
+--        -- Sensors and devices
+--        movement_sensor: device Movement_Sensor;
+--        luminance_sensor: device Luminance_Sensor;
+--        switch_device: device Switch_Device;
+--        light_controller: device Light_Controller;
+--        light_switch: device Light_Switch;
+--
+--        -- Hardware components
+--        Main_Proc : processor Main_Processor.impl;
+--        Main_Bus: bus System_Bus.impl;
+--        Main_Memory: memory Main_Memory.impl;
+--    connections
+--        -- Connect sensors and switch to the controller
+--        movement_conn: port movement_sensor.movement_out -> light_controller.movement_in;
+--        luminance_conn: port luminance_sensor.luminance_out -> light_controller.luminance_in;
+--        switch_conn: port switch_device.switch_out -> light_controller.switch_in;
+--
+--        -- Connect controller to the light switch
+--        light_conn: port light_controller.light_out -> light_switch.percentage_in;
+--
+--        -- Hardware connections
+--        -- proc_bus_conn: bus access Main_Proc -> Main_Bus;
+--        -- mem_bus_conn: bus access Main_Memory -> Main_Bus;
+--    end Intelligent_House.impl;
+--    
 end smarthomeMirage;
