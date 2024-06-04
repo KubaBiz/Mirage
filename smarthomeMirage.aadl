@@ -84,7 +84,8 @@ public
     process LightController
         features
             receive_movement_in: in data port IsMovement;
-            receive_luminance_in : in data port LightIntensity;
+            receive_luminance_in: in data port LightIntensity;
+            receive_switch_in: in data port SwitchLight;
             send_light_percent_out: out data port LightPercentage;
     end LightController;
 
@@ -95,26 +96,46 @@ public
         connections
             c1: port receive_luminance_in -> sensorsThread.luminance_in;
             c2: port receive_movement_in -> sensorsThread.movement_in;
-            c3: port sensorsThread.light_percent_out -> switchThread.light_percent_in;
+            c3: port receive_switch_in -> switchThread.light_switch_in;
+            c4: port sensorsThread.light_percent_out -> switchThread.light_percent_in;
+            c5: port switchThread.light_percent_out -> send_light_percent_out;
     end LightController.impl;
 
 
---    process AlarmController
---
---    end AlarmController
---
---    process implementation AlarmController.impl
---
---    end AlarmController.impl
---
---
---    process TemperatureController
---
---    end TemperatureController
---
---    process implementation TemperatureController.impl
---
---    end TemperatureController.impl
+    process AlarmController
+        features
+            receive_movement_in: in data port IsMovement;
+            receive_switch_in : in data port SwitchAlarm;
+            send_turn_on_out: out data port TurnOn;
+    end AlarmController;
+
+    process implementation AlarmController.impl
+		subcomponents
+            alarmThread: thread AlarmThread.impl;
+        connections
+            c1: port receive_movement_in -> alarmThread.movement_in;
+            c2: port receive_switch_in -> alarmThread.alarm_switch_in;
+            c3: port alarmThread.turn_on_out -> send_turn_on_out;
+    end AlarmController.impl;
+
+
+    process AirConditionerController
+		features
+            receive_humidity_in: in data port Humidity;
+            receive_temperature_in: in data port Temperature;
+            receive_switch_temperature_in: in data port SwitchTemperature;
+            send_temperature_adjustment_out: out data port TemperatureAdjustment;
+    end AirConditionerController;
+
+    process implementation AirConditionerController.impl
+		subcomponents
+            airconditionerThread: thread AirConditionerThread.impl;
+        connections
+            c1: port receive_humidity_in -> airconditionerThread.humidity_in;
+            c2: port receive_temperature_in -> airconditionerThread.temperature_in;
+            c3: port receive_switch_temperature_in -> airconditionerThread.switch_temperature_in;
+            c4: port airconditionerThread.temperature_adjustment_out -> send_temperature_adjustment_out;
+    end AirConditionerController.impl;
 	
 	-- end processes --
 	
