@@ -102,23 +102,6 @@ public
     end LightController.impl;
 
 
-    process AlarmController
-        features
-            receive_movement_in: in data port IsMovement;
-            receive_switch_in : in data port SwitchAlarm;
-            send_turn_on_out: out data port TurnOn;
-    end AlarmController;
-
-    process implementation AlarmController.impl
-		subcomponents
-            alarmThread: thread AlarmThread.impl;
-        connections
-            c1: port receive_movement_in -> alarmThread.movement_in;
-            c2: port receive_switch_in -> alarmThread.alarm_switch_in;
-            c3: port alarmThread.turn_on_out -> send_turn_on_out;
-    end AlarmController.impl;
-
-
     process AirConditionerController
 		features
             receive_humidity_in: in data port Humidity;
@@ -136,6 +119,23 @@ public
             c3: port receive_switch_temperature_in -> airconditionerThread.switch_temperature_in;
             c4: port airconditionerThread.temperature_adjustment_out -> send_temperature_adjustment_out;
     end AirConditionerController.impl;
+    
+    
+    process AlarmController
+        features
+            receive_movement_in: in data port IsMovement;
+            receive_switch_in : in data port SwitchAlarm;
+            send_turn_on_out: out data port TurnOn;
+    end AlarmController;
+
+    process implementation AlarmController.impl
+		subcomponents
+            alarmThread: thread AlarmThread.impl;
+        connections
+            c1: port receive_movement_in -> alarmThread.movement_in;
+            c2: port receive_switch_in -> alarmThread.alarm_switch_in;
+            c3: port alarmThread.turn_on_out -> send_turn_on_out;
+    end AlarmController.impl;
 	
 	-- end processes --
 	
@@ -148,7 +148,7 @@ public
             light_percent_out: out data port LightPercentage;
         properties
             SEI::MIPSBudget => 10.0 mips;
-            Thread_Properties::Dispatch_Protocol => Sporadic;
+            Thread_Properties::Dispatch_Protocol => Periodic; -- TODO check --
 			Timing_Properties::Period => 1000ms;
     end LightSensorsThread;
 
@@ -162,27 +162,13 @@ public
             light_percent_out: out data port LightPercentage;
         properties
             SEI::MIPSBudget => 5.0 mips;
-            Thread_Properties::Dispatch_Protocol => Periodic;
+            Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
             Timing_Properties::Period => 50ms;
     end LightSwitchThread;
 
     thread implementation LightSwitchThread.impl
     end LightSwitchThread.impl;
-
-
-    thread AlarmThread
-        features
-            movement_in: in data port IsMovement;
-            alarm_switch_in: in data port SwitchAlarm;
-            turn_on_out: out data port TurnOn;
-        properties
-            SEI::MIPSBudget => 5.0 mips;
-            Thread_Properties::Dispatch_Protocol => Periodic;
-            Timing_Properties::Period => 100ms; 
-    end AlarmThread;
-
-    thread implementation AlarmThread.impl
-    end AlarmThread.impl;
+    
 
     thread AirConditionerThread
         features
@@ -192,72 +178,151 @@ public
             temperature_adjustment_out: out data port TemperatureAdjustment;
         properties
             SEI::MIPSBudget => 15.0 mips;
-            Thread_Properties::Dispatch_Protocol => Periodic;
+            Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
 			Timing_Properties::Period => 50ms;
     end AirConditionerThread;
 
     thread implementation AirConditionerThread.impl
     end AirConditionerThread.impl;
+    
+    
+    thread AlarmThread
+        features
+            movement_in: in data port IsMovement;
+            alarm_switch_in: in data port SwitchAlarm;
+            turn_on_out: out data port TurnOn;
+        properties
+            SEI::MIPSBudget => 5.0 mips;
+            Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
+            Timing_Properties::Period => 100ms; 
+    end AlarmThread;
+
+    thread implementation AlarmThread.impl
+    end AlarmThread.impl;
 	
 	-- end threads --
 	
 	-- devices --
 	
     device MovementSensor
-
+    	features
+    		movement_out: out data port IsMovement;
+    		-- TODO bus access -- 
+    	properties
+    		SEI::GrossWeight => 0.3 kg;
+			Timing_Properties::Period => 50ms;
+			Thread_Properties::Dispatch_Protocol => Periodic; -- TODO check --
     end MovementSensor;
 
     device LuminanceSensor
-
+		features 
+			luminance_out: out data port LightIntensity;
+			-- TODO bus access --
+    	properties
+    		SEI::GrossWeight => 0.2 kg;
+			Timing_Properties::Period => 50ms;
+			Thread_Properties::Dispatch_Protocol => Periodic; -- TODO check --
     end LuminanceSensor;
 
     device LightSwitch
-
+    	features
+    		switch_out: out data port SwitchLight;
+    		-- TODO bus access --
+    	properties
+    		SEI::GrossWeight => 0.1 kg;
+			-- Timing_Properties::Period => 50ms;
+			Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
     end LightSwitch;
 
     device LightDevice
-
+    	features 
+    		light_in: in data port LightPercentage;
+    		-- TODO bus access --
+    	properties
+			SEI::GrossWeight => 0.2 kg;
+			-- Timing_Properties::Period => 50ms;
+			Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
     end LightDevice;
 
 
     device HumiditySensor
+    	features
+    		humidity_out: out data port Humidity;
+    		-- TODO bus access --
+    	properties
+    		SEI::GrossWeight => 0.1 kg;
+    		Timing_Properties::Period => 50ms;
+			Thread_Properties::Dispatch_Protocol => Periodic; -- TODO check
 
     end HumiditySensor;
 
     device TemperatureSensor
-
+		features
+    		temperature_out: out data port Temperature;
+    		-- TODO bus access --
+    	properties
+    		SEI::GrossWeight => 0.2 kg;
+    		Timing_Properties::Period => 50ms;
+			Thread_Properties::Dispatch_Protocol => Periodic; -- TODO check
     end TemperatureSensor;
 
     device TemperatureSwitch
-
+		features
+    		switch_out: out data port SwitchTemperature;
+    		-- TODO bus access --
+    	properties
+    		SEI::GrossWeight => 0.1 kg;
+			-- Timing_Properties::Period => 50ms;
+			Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
     end TemperatureSwitch;
 
     device AirConditioner
-
+		features 
+    		temperature_in: in data port TemperatureAdjustment;
+    		-- TODO bus access --
+    	properties
+			SEI::GrossWeight => 8.0 kg;
+			-- Timing_Properties::Period => 50ms;
+			Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
     end AirConditioner;
 
 
     device AlarmSwitch
-
+		features
+    		switch_out: out data port SwitchAlarm;
+    		-- TODO bus access --
+    	properties
+    		SEI::GrossWeight => 0.1 kg;
+			-- Timing_Properties::Period => 50ms;
+			Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
     end AlarmSwitch;
 
     device Speaker
-
+		features 
+    		turn_on_in: in data port TurnOn;
+    		-- TODO bus access --
+    	properties
+			SEI::GrossWeight => 1.0 kg;
+			-- Timing_Properties::Period => 50ms;
+			Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
     end Speaker;
 	
 	-- end devices --
 	
 	-- bus, memory, processor --
 	
+	-- TODO --
 	
 	-- end bus, memory, processor --
 	
 	-- system --
 	
+	-- TODO --
 	
 	-- end system -- 
 
-    
+
+-- TODO delete all below when done --    
 --    -- Movement Sensor Interface
 --    device Movement_Sensor
 --    features
