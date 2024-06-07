@@ -82,11 +82,12 @@ public
 	-- processes --
 	
     process LightController
-        features
+    	features
             receive_movement_in: in data port IsMovement;
             receive_luminance_in: in data port LightIntensity;
             receive_switch_in: in data port SwitchLight;
             send_light_percent_out: out data port LightPercentage;
+            
     end LightController;
 
     process implementation LightController.impl
@@ -99,6 +100,7 @@ public
             c3: port receive_switch_in -> switchThread.light_switch_in;
             c4: port sensorsThread.light_percent_out -> switchThread.light_percent_in;
             c5: port switchThread.light_percent_out -> send_light_percent_out;
+            
     end LightController.impl;
 
 
@@ -376,13 +378,10 @@ public
 	    hc_access: requires bus access HomeConnection;
 	  properties
 			SEI::MIPSCapacity => 200.0 mips;
-			SEI::GrossWeight => 0.1 kg;
+			SEI::NetWeight => 0.1 kg;
 	end CPU;
 
-	processor implementation CPU.impl
-		subcomponents
-			ram: memory RAM;
-	end CPU.impl;
+	processor implementation CPU.impl	end CPU.impl;
 	
 	-- end bus, memory, processor --
 	
@@ -432,6 +431,7 @@ public
 
             -- bus connections --
             processor_bus: bus access homeConnection <-> cpu.hc_access;
+            ram_bus: bus access homeConnection <-> ram.hc_access;
             
             movementsensor_bus: bus access homeConnection <-> movementSensor.hc_access;
             luminancesensor_bus: bus access homeConnection <-> luminanceSensor.hc_access;
@@ -450,10 +450,8 @@ public
             speaker_bus: bus access homeConnection <-> speaker.hc_access;
         
         properties
-        --  Examples:
-        --  Actual_Connection_Binding => (reference(systemBus)) applies to cooler_bus;
-        --  Actual_Processor_Binding => (reference(mainProcessor)) applies to AirConditioningControlProcess;
 	    	Actual_Connection_Binding => (reference(HomeConnection)) applies to processor_bus;
+	    	Actual_Connection_Binding => (reference(HomeConnection)) applies to ram_bus;
             
 			Actual_Connection_Binding => (reference(HomeConnection)) applies to movementsensor_bus;
 			Actual_Connection_Binding => (reference(HomeConnection)) applies to luminancesensor_bus;

@@ -11,7 +11,7 @@
       <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.50/@ownedPropertyAssociation.0"/>
     </ownedPropertyAssociation>
     <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.NetWeight"/>
       <ownedValue>
         <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
           <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
@@ -22,23 +22,6 @@
     <featureInstance name="hc_access" category="busAccess" type="/1">
       <feature xsi:type="aadl2:BusAccess" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.50/@ownedBusAccess.0"/>
     </featureInstance>
-    <componentInstance name="ram" category="memory">
-      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
-        <ownedValue>
-          <ownedValue xsi:type="aadl2:RealLiteral" value="0.03">
-            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
-          </ownedValue>
-        </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.48/@ownedPropertyAssociation.0"/>
-      </ownedPropertyAssociation>
-      <featureInstance name="hc_access" category="busAccess" type="/1">
-        <feature xsi:type="aadl2:BusAccess" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.48/@ownedBusAccess.0"/>
-      </featureInstance>
-      <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.51/@ownedMemorySubcomponent.0"/>
-      <index>0</index>
-      <classifier xsi:type="aadl2:MemoryType" href="../smarthomeMirage.aadl#smarthomeMirage.RAM"/>
-    </componentInstance>
     <classifier xsi:type="aadl2:ProcessorImplementation" href="../smarthomeMirage.aadl#smarthomeMirage.CPU.impl"/>
     <systemOperationMode name="No Modes"/>
     <componentImplementation xsi:type="aadl2:ProcessorImplementation" href="../smarthomeMirage.aadl#smarthomeMirage.CPU.impl"/>

@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="fc834378-5eba-4e04-9144-3d0bb638453e" manual="true">
+    <element uuid="d48a1f33-49da-4f1e-87da-8a36dfb079d8" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>airconditioner_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="-36.00390625" y="501.0"/>
+        <point x="-30.00390625" y="501.0"/>
+        <point x="-30.00390625" y="790.0"/>
+        <point x="1106.5989990234375" y="790.0"/>
+        <point x="1106.5989990234375" y="732.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="5034ba2b-0982-436e-afcd-a53dbeee3eed" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>alarmswitch_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="-36.00390625" y="421.0"/>
+        <point x="9.996112823486328" y="421.0"/>
+        <point x="9.996112823486328" y="310.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="db211e6a-11ae-40b3-aca3-b9ce272f51a5" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>alarmswitch_ethernet</seg>
+      </bo>
+      <bendpoints>
+        <point x="-40.00390625" y="260.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="16771edd-2d0c-448a-bb4a-99fabc62eb89" manual="true">
+      <element uuid="439324ed-a345-4423-8f64-1dbf0d0d930f" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c1</seg>
+      </bo>
+      <bendpoints>
+        <point x="450.99609375" y="180.0"/>
+        <point x="450.99609375" y="95.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="0b8363c2-7b04-4c34-b650-48b39e532b96" manual="true">
+      <element uuid="045ebc14-3c2b-4156-b5f0-d1aaa7b86d98" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c10</seg>
+      </bo>
+      <bendpoints>
+        <point x="440.99609375" y="285.0"/>
+        <point x="440.99609375" y="230.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="d888938c-c9fa-4655-a3ef-b718df0f989f" manual="true">
+      <element uuid="6816c998-b84b-4654-9558-afc4df4d534d" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c11</seg>
+      </bo>
+    </element>
+    <element uuid="e2838b4e-770c-429c-bf37-89be7d5d7b3f" manual="true">
+      <element uuid="90860d8a-3a67-4847-af12-7b654dc3d074" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c2</seg>
+      </bo>
+      <bendpoints>
+        <point x="440.99609375" y="100.0"/>
+        <point x="440.99609375" y="45.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="0def5663-23aa-477a-82b2-f24750718c0c" manual="true">
+      <element uuid="19dc53a2-ea10-450f-9358-3fd7f3cdf324" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c3</seg>
+      </bo>
+    </element>
+    <element uuid="39a5deac-83d4-486f-be35-b1aac46ec15e" manual="true">
+      <element uuid="2a2bdd91-6e87-4389-b5f9-bfc05670f5a2" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c4</seg>
+      </bo>
+    </element>
+    <element uuid="1c917093-627b-4359-8b04-6ce7ef23807d" manual="true">
+      <element uuid="2559d4f4-8b86-405b-a2af-795745794fcb" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c5</seg>
+      </bo>
+      <bendpoints>
+        <point x="440.99609375" y="762.0"/>
+        <point x="440.99609375" y="732.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="d70aaba8-652c-49c0-8260-8cdf2e6ca70c" manual="true">
+      <element uuid="67d1c391-4e25-461f-bfed-7b4589511a04" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c6</seg>
+      </bo>
+    </element>
+    <element uuid="888b6a4e-9531-4f51-8723-7919f0bd3973" manual="true">
+      <element uuid="75150275-289a-4528-8991-917e6c1b1861" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c7</seg>
+      </bo>
+      <bendpoints>
+        <point x="440.99609375" y="416.0"/>
+        <point x="440.99609375" y="632.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="e97361d3-4225-4733-9a60-058942665437" manual="true">
+      <element uuid="b73468e2-eca0-4424-8d17-3b1d329628a9" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c8</seg>
+      </bo>
+    </element>
+    <element uuid="933a99e4-b428-40a3-acf4-9411048efa6e" manual="true">
+      <element uuid="40ba2d53-8737-4f6c-8cb1-ccd3894f2b42" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c9</seg>
+      </bo>
+    </element>
+    <element uuid="d8d6b58b-84e3-4365-ae89-8c7bdfa2b946" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>humiditysensor_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="-36.00390625" y="491.0"/>
+        <point x="-20.00390625" y="491.0"/>
+        <point x="-20.00390625" y="762.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="41f2569d-c4f7-4aa1-9ae7-d60ac33af386" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>lightdevice_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="-36.00390625" y="431.0"/>
+        <point x="19.996116638183594" y="431.0"/>
+        <point x="19.996116638183594" y="338.0"/>
+        <point x="1106.59912109375" y="338.0"/>
+        <point x="1106.59912109375" y="95.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="23a9bfac-dd30-4ebc-af0d-0c781c1a94d4" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>lightswitch_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="-36.00390625" y="391.0"/>
+        <point x="-20.00390625" y="391.0"/>
+        <point x="-20.00390625" y="20.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="bc48a999-8ac7-4873-8152-e9addbd00f31" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>lightswitch_ethernet</seg>
+      </bo>
+      <bendpoints>
+        <point x="-36.00390625" y="250.0"/>
+        <point x="-30.00390625" y="250.0"/>
+        <point x="-30.00390625" y="-30.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="6e969a40-416c-43a3-940f-8bb13349c027" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>luminancesensor_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="-36.00390625" y="401.0"/>
+        <point x="-10.00390625" y="401.0"/>
+        <point x="-10.00390625" y="100.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="ae1ab7ba-6d68-4999-8cb9-4c73ba19e471" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>movementsensor_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="-36.00390625" y="411.0"/>
+        <point x="-0.003925323486328125" y="411.0"/>
+        <point x="-0.003925323486328125" y="180.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="c9dfd862-fa0b-4f02-8acc-da7f06ee08d5" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>processor_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="-36.00390625" y="471.0"/>
+        <point x="-0.003925323486328125" y="471.0"/>
+        <point x="-0.003925323486328125" y="602.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="ef18b08f-b542-4460-8ebc-fbab8685bf08" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>ram_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="-36.00390625" y="451.0"/>
+        <point x="19.996116638183594" y="451.0"/>
+        <point x="19.996116638183594" y="521.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="13e39c78-010b-4fc4-bdb1-d80dedc43d22" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>speaker_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="-36.00390625" y="461.0"/>
+        <point x="9.99609375" y="461.0"/>
+        <point x="9.99609375" y="549.0"/>
+        <point x="1116.598876953125" y="549.0"/>
+        <point x="1116.598876953125" y="255.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="3e99be8c-1ac9-4e2c-a2e3-4493e1d02bde" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>temperaturesensor_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="-36.00390625" y="481.0"/>
+        <point x="-10.003887176513672" y="481.0"/>
+        <point x="-10.003887176513672" y="682.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="4002e27c-61c8-4c56-8283-ca8424701bba" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>temperatureswitch_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="-40.00390625" y="441.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="4132d8ba-2ef4-42bc-81f6-4a8836ba7f1f" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>temperatureswitch_ethernet</seg>
+      </bo>
+      <bendpoints>
+        <point x="-36.00390625" y="270.0"/>
+        <point x="29.996089935302734" y="270.0"/>
+        <point x="29.996089935302734" y="391.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="98866d9b-bf5d-4a0b-92f6-1b74de7f37f6" manual="true">
+      <element uuid="ec6b6e66-05fb-46c1-8423-50b34e5236f2" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>hc_access</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="9b17afd0-1f8e-4053-93c2-0ac5214aa5af" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>temperature_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>airConditioner</seg>
+      </bo>
+      <position x="1336.598876953125" y="750.0"/>
+      <size width="343.55859375" height="110.0"/>
+    </element>
+    <element uuid="48bb1b0c-223e-475c-867c-c22c47d7ca64" manual="true">
+      <element uuid="81fcf2c3-0ef6-4532-b62c-01451b2a58b9" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>receive_humidity_in</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="0221b77a-1bfb-4c26-b68b-bc66ba8d10c0" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>receive_switch_temperature_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="f7da6719-e925-4958-ba23-1d89d5a1169a" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>receive_temperature_in</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="dd54062b-1b12-4670-9a6b-ba3cc28b2d69" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>send_temperature_adjustment_out</seg>
+        </bo>
+        <position x="416.7994384765625" y="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>airConditionerController</seg>
+      </bo>
+      <position x="670.99609375" y="700.0"/>
+      <size width="635.602783203125" height="160.0"/>
+    </element>
+    <element uuid="21de9e2d-a5a3-4366-bf0a-cef1ccb09991" manual="true">
+      <element uuid="623ca011-f729-42e0-96d6-a1e1358f332d" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>receive_movement_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="f0486452-e687-41a2-9ee2-823296d0fef7" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>receive_switch_in</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="4168426f-73e6-49dd-8afa-f599acb159b2" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>send_turn_on_out</seg>
+        </bo>
+        <position x="313.7005310058594" y="35.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>alarmController</seg>
+      </bo>
+      <position x="738.463508605957" y="248.0"/>
+      <size width="433.2005386352539" height="110.0"/>
+    </element>
+    <element uuid="74bfe555-2152-4ef2-8964-4358dc012540" manual="true">
+      <element uuid="23d03ae0-a329-428d-9cf4-714a825415f9" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>ethernet_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="e963081e-916f-4f94-a027-8b979ec0df31" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>hc_access</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="3275b499-1743-4075-ab35-cbeabc3aeeb2" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>switch_out</seg>
+        </bo>
+        <position x="274.4817543029785" y="35.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>alarmSwitch</seg>
+      </bo>
+      <position x="263.8372497558594" y="328.0"/>
+      <size width="349.4765396118164" height="110.0"/>
+    </element>
+    <element uuid="9552f87d-131b-4cb8-a232-c58ea313c2bf" manual="true">
+      <element uuid="a0502281-a969-49f8-936b-eeb7ee9cb177" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>hc_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>cpu</seg>
+      </bo>
+      <position x="249.99609375" y="670.0"/>
+      <size width="228.67578125" height="60.0"/>
+    </element>
+    <element uuid="dc084a70-8792-492e-bd56-60ffbb60900f" manual="true">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>ethernet</seg>
+      </bo>
+      <position x="63.88152313232422" y="350.0"/>
+      <size width="106.11457824707031" height="40.0"/>
+    </element>
+    <element uuid="b23b539f-06bc-4563-aef4-4df8312cba1a" manual="true">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>homeConnection</seg>
+      </bo>
+      <position x="12.0" y="491.0"/>
+      <size width="157.99610137939453" height="130.0"/>
+    </element>
+    <element uuid="1ab68b97-1fa6-429d-817a-4f5d53e16bca" manual="true">
+      <element uuid="c46597a9-55f5-41b0-89d4-c264ee0b7700" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>hc_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="51b020aa-acfb-4f13-ad11-f04fd43ab2ee" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>humidity_out</seg>
+        </bo>
+        <position x="236.6822967529297" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>humiditySensor</seg>
+      </bo>
+      <position x="283.35546875" y="830.0"/>
+      <size width="324.28125762939453" height="60.0"/>
+    </element>
+    <element uuid="48737778-4499-4af7-84b7-4130cdd0282a" manual="true">
+      <element uuid="d63e79db-d45e-4c1e-a18e-a786c09f5ba6" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>receive_luminance_in</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="6dc0b47d-daa7-48e9-9972-ed444dfe8b4e" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>receive_movement_in</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="286c8342-be2b-42d9-82a4-68338f709e62" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>receive_switch_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="670832e7-4ea3-491c-9e24-486737183173" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>send_light_percent_out</seg>
+        </bo>
+        <position x="290.07421875" y="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>lightController</seg>
+      </bo>
+      <position x="719.7216606140137" y="63.0"/>
+      <size width="440.7005157470703" height="160.0"/>
+    </element>
+    <element uuid="e225c809-7104-4585-8cee-388e6031794b" manual="true">
+      <element uuid="6840ca2c-41a6-4eeb-a26f-83ac9051f6cb" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>hc_access</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="f4305650-2a09-4a14-acf5-9a513e20223b" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>light_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>lightDevice</seg>
+      </bo>
+      <position x="1336.598876953125" y="113.0"/>
+      <size width="272.3932342529297" height="110.0"/>
+    </element>
+    <element uuid="6b8be3e2-a05b-4ae7-85aa-6bdc317bea0a" manual="true">
+      <element uuid="3b515cb7-6083-4612-8cf3-1c16e212b572" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>ethernet_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="38db7ced-1c4a-40cc-b4c1-c11232c44dbc" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>hc_access</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="88f3a7e9-bc52-40e6-b3f0-87e438a2a81a" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>switch_out</seg>
+        </bo>
+        <position x="265.6015434265137" y="35.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>lightSwitch</seg>
+      </bo>
+      <position x="266.7973200480143" y="38.0"/>
+      <size width="340.59632873535156" height="110.0"/>
+    </element>
+    <element uuid="cac89429-0b43-49f2-81b0-069fa51a4b91" manual="true">
+      <element uuid="bcf9eef1-cf2c-41f7-8fde-26bc868e5038" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>hc_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="c9620ed9-928b-4d9e-9d44-a75ccf92b17b" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>luminance_out</seg>
+        </bo>
+        <position x="258.9349060058594" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>luminanceSensor</seg>
+      </bo>
+      <position x="266.66601181030273" y="168.0"/>
+      <size width="357.66017150878906" height="60.0"/>
+    </element>
+    <element uuid="c3366d90-5c58-464f-9b2e-d5da6a0ca798" manual="true">
+      <element uuid="64c1a908-fbbe-450d-b2d9-84351726b6b1" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>hc_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="627e6609-fc09-4c7d-a26e-ef17b93f6c37" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>movement_out</seg>
+        </bo>
+        <position x="261.87760162353516" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>movementSensor</seg>
+      </bo>
+      <position x="264.45898818969727" y="248.0"/>
+      <size width="362.07421875" height="60.0"/>
+    </element>
+    <element uuid="6127f9b2-98f5-40b9-afd1-826d7def6d53" manual="true">
+      <element uuid="9573e1c6-5ed7-4e8f-9cb9-9286d7f92ef0" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>hc_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>ram</seg>
+      </bo>
+      <position x="249.99609375" y="589.0"/>
+      <size width="230.140625" height="60.0"/>
+    </element>
+    <element uuid="fceaec1f-0858-4b31-8878-244f96415b1a" manual="true">
+      <element uuid="722f959c-76a7-49f1-8a8d-a009ba94a906" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>hc_access</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="8850e6c9-1497-48fa-a6a3-be04fbb8be13" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>turn_on_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>speaker</seg>
+      </bo>
+      <position x="1336.598876953125" y="273.0"/>
+      <size width="254.6523208618164" height="110.0"/>
+    </element>
+    <element uuid="2429b1cb-491e-4267-a7cd-f579b484d373" manual="true">
+      <element uuid="5165109e-3717-4521-8208-de5b805bd9ba" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>hc_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="deaa3d79-bbbf-4478-b2e0-75c4376ba99b" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>temperature_out</seg>
+        </bo>
+        <position x="281.16146087646484" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>temperatureSensor</seg>
+      </bo>
+      <position x="249.99609375" y="750.0"/>
+      <size width="391.00000762939453" height="60.0"/>
+    </element>
+    <element uuid="4d72d4e1-e584-4f2f-b80f-8ae478560c2f" manual="true">
+      <element uuid="3549f54f-0a02-4c23-8772-e3066abd2e91" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>ethernet_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="655df87e-5a2b-4afc-b819-e9d9f410aa4c" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>hc_access</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="b7742a96-5870-44a2-ad4f-24873639d9e8" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>switch_out</seg>
+        </bo>
+        <position x="313.02993392944336" y="35.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>temperatureSwitch</seg>
+      </bo>
+      <position x="250.98785654703775" y="459.0"/>
+      <size width="388.02471923828125" height="110.0"/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>SmartHomeMirage.impl</seg>
+    </bo>
+    <position x="-210.0" y="-110.0"/>
+    <size width="1692.157470703125" height="913.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>smarthomeMirage::SmartHomeMirage.impl</seg>
+    </context>
+  </config>
+</diagram:Diagram>

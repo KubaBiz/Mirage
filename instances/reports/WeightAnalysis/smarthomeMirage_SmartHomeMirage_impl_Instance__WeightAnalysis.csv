@@ -1,0 +1,17 @@
+Weight totals Report
+
+ethernet: [L] Sum of weights / gross weight is 0,150 kg (no limit specified)
+homeConnection: [L] Sum of weights / gross weight is 0,150 kg (no limit specified)
+movementSensor: [L] Sum of weights / gross weight is 0,300 kg (no limit specified)
+luminanceSensor: [L] Sum of weights / gross weight is 0,200 kg (no limit specified)
+lightSwitch: [L] Sum of weights / gross weight is 0,100 kg (no limit specified)
+lightDevice: [L] Sum of weights / gross weight is 0,200 kg (no limit specified)
+humiditySensor: [L] Sum of weights / gross weight is 0,100 kg (no limit specified)
+temperatureSensor: [L] Sum of weights / gross weight is 0,200 kg (no limit specified)
+temperatureSwitch: [L] Sum of weights / gross weight is 0,100 kg (no limit specified)
+airConditioner: [L] Sum of weights / gross weight is 8,000 kg (no limit specified)
+alarmSwitch: [L] Sum of weights / gross weight is 0,100 kg (no limit specified)
+speaker: [L] Sum of weights / gross weight is 1,000 kg (no limit specified)
+ram: [L] Sum of weights / gross weight is 0,030 kg (no limit specified)
+cpu: [L] Sum of weights / gross weight is 0,100 kg (no limit specified)
+SmartHomeMirage_impl_Instance: [L] Sum of weights / gross weight is 10,730 kg (no limit specified)

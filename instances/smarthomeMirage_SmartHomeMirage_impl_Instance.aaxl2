@@ -647,7 +647,7 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.16"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.14"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.15"/>
       </ownedPropertyAssociation>
       <featureInstance name="receive_movement_in" type="/1">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -757,7 +757,7 @@
               <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.16"/>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.14"/>
+          <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.15"/>
         </ownedPropertyAssociation>
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
@@ -875,7 +875,7 @@
               <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.16"/>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.14"/>
+          <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.15"/>
         </ownedPropertyAssociation>
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
@@ -1004,7 +1004,7 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.16"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.15"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.16"/>
       </ownedPropertyAssociation>
       <featureInstance name="receive_humidity_in" type="/7">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -1142,7 +1142,7 @@
               <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.16"/>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.15"/>
+          <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.16"/>
         </ownedPropertyAssociation>
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
@@ -1315,7 +1315,7 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.16"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.16"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.17"/>
       </ownedPropertyAssociation>
       <featureInstance name="receive_movement_in" type="/1">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -1388,7 +1388,7 @@
               <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.16"/>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.16"/>
+          <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.17"/>
         </ownedPropertyAssociation>
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
@@ -1490,15 +1490,6 @@
     </componentInstance>
     <componentInstance name="cpu" category="processor">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
-        <ownedValue>
-          <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
-            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
-          </ownedValue>
-        </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.50/@ownedPropertyAssociation.1"/>
-      </ownedPropertyAssociation>
-      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSCapacity"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:RealLiteral" value="200.0">
@@ -1507,26 +1498,18 @@
         </ownedValue>
         <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.50/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.NetWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.50/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
       <featureInstance name="hc_access" category="busAccess" type="/2">
         <feature xsi:type="aadl2:BusAccess" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.50/@ownedBusAccess.0"/>
       </featureInstance>
-      <componentInstance name="ram" category="memory">
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:RealLiteral" value="0.03">
-              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.48/@ownedPropertyAssociation.0"/>
-        </ownedPropertyAssociation>
-        <featureInstance name="hc_access" category="busAccess" type="/2">
-          <feature xsi:type="aadl2:BusAccess" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.48/@ownedBusAccess.0"/>
-        </featureInstance>
-        <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.51/@ownedMemorySubcomponent.0"/>
-        <index>0</index>
-        <classifier xsi:type="aadl2:MemoryType" href="../smarthomeMirage.aadl#smarthomeMirage.RAM"/>
-      </componentInstance>
       <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedProcessorSubcomponent.0"/>
       <index>0</index>
       <classifier xsi:type="aadl2:ProcessorImplementation" href="../smarthomeMirage.aadl#smarthomeMirage.CPU.impl"/>
@@ -1539,10 +1522,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.4"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.5"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.0" destination="/0/@componentInstance.4/@featureInstance.2">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.4"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.5"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="ethernet -> temperatureSwitch.ethernet_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.8/@featureInstance.2" source="/0/@componentInstance.0">
@@ -1553,10 +1536,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.9"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.10"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.0" destination="/0/@componentInstance.8/@featureInstance.2">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.9"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.10"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="ethernet -> alarmSwitch.ethernet_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.10/@featureInstance.2" source="/0/@componentInstance.0">
@@ -1567,10 +1550,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.12"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.13"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.0" destination="/0/@componentInstance.10/@featureInstance.2">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.12"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.13"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="homeConnection -> cpu.hc_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.16/@featureInstance.0" source="/0/@componentInstance.1">
@@ -1587,7 +1570,7 @@
         <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.0"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="homeConnection -> movementSensor.hc_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.2/@featureInstance.1" source="/0/@componentInstance.1">
+    <connectionInstance name="homeConnection -> ram.hc_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.12/@featureInstance.0" source="/0/@componentInstance.1">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
@@ -1597,8 +1580,22 @@
         </ownedValue>
         <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.1"/>
       </ownedPropertyAssociation>
-      <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.2/@featureInstance.1">
+      <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.12/@featureInstance.0">
         <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="homeConnection -> movementSensor.hc_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.2/@featureInstance.1" source="/0/@componentInstance.1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.2/@featureInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.2"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="homeConnection -> luminanceSensor.hc_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.3/@featureInstance.1" source="/0/@componentInstance.1">
@@ -1609,10 +1606,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.2"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.3"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.3/@featureInstance.1">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.2"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.3"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="homeConnection -> lightSwitch.hc_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.4/@featureInstance.1" source="/0/@componentInstance.1">
@@ -1623,10 +1620,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.3"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.4"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.4/@featureInstance.1">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.3"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.4"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="homeConnection -> lightDevice.hc_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.5/@featureInstance.1" source="/0/@componentInstance.1">
@@ -1637,10 +1634,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.5"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.6"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.5/@featureInstance.1">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.5"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.6"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="homeConnection -> humiditySensor.hc_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.6/@featureInstance.1" source="/0/@componentInstance.1">
@@ -1651,10 +1648,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.6"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.7"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.6/@featureInstance.1">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.6"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.7"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="homeConnection -> temperatureSensor.hc_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.7/@featureInstance.1" source="/0/@componentInstance.1">
@@ -1665,10 +1662,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.7"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.8"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.7/@featureInstance.1">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.7"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.8"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="homeConnection -> temperatureSwitch.hc_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.8/@featureInstance.1" source="/0/@componentInstance.1">
@@ -1679,10 +1676,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.8"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.9"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.8/@featureInstance.1">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.8"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.9"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="homeConnection -> airConditioner.hc_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.9/@featureInstance.1" source="/0/@componentInstance.1">
@@ -1693,10 +1690,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.10"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.11"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.9/@featureInstance.1">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.10"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.11"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="homeConnection -> alarmSwitch.hc_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.10/@featureInstance.1" source="/0/@componentInstance.1">
@@ -1707,10 +1704,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.11"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.12"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.10/@featureInstance.1">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.11"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.12"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="homeConnection -> speaker.hc_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.11/@featureInstance.1" source="/0/@componentInstance.1">
@@ -1721,10 +1718,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.13"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.14"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.11/@featureInstance.1">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.13"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.14"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="movementSensor.movement_out -> lightController.sensorsThread.movement_in" complete="true" kind="portConnection" destination="/0/@componentInstance.13/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.2/@featureInstance.0">
@@ -1751,10 +1748,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.1"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.2"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.2/@featureInstance.1" destination="/0/@componentInstance.1" reverse="true">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.1"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.2"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="luminanceSensor.luminance_out -> lightController.sensorsThread.luminance_in" complete="true" kind="portConnection" destination="/0/@componentInstance.13/@componentInstance.0/@featureInstance.1" source="/0/@componentInstance.3/@featureInstance.0">
@@ -1773,10 +1770,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.2"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.3"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.3/@featureInstance.1" destination="/0/@componentInstance.1" reverse="true">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.2"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.3"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="lightSwitch.switch_out -> lightController.switchThread.light_switch_in" complete="true" kind="portConnection" destination="/0/@componentInstance.13/@componentInstance.1/@featureInstance.0" source="/0/@componentInstance.4/@featureInstance.0">
@@ -1795,10 +1792,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.3"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.4"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.4/@featureInstance.1" destination="/0/@componentInstance.1" reverse="true">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.3"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.4"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="lightSwitch.ethernet_access -> ethernet" complete="true" kind="accessConnection" destination="/0/@componentInstance.0" source="/0/@componentInstance.4/@featureInstance.2">
@@ -1809,10 +1806,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.4"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.5"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.4/@featureInstance.2" destination="/0/@componentInstance.0" reverse="true">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.4"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.5"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="lightDevice.hc_access -> homeConnection" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.5/@featureInstance.1">
@@ -1823,10 +1820,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.5"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.6"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.5/@featureInstance.1" destination="/0/@componentInstance.1" reverse="true">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.5"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.6"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="humiditySensor.humidity_out -> airConditionerController.airconditionerThread.humidity_in" complete="true" kind="portConnection" destination="/0/@componentInstance.14/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.6/@featureInstance.0">
@@ -1845,10 +1842,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.6"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.7"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.1" reverse="true">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.6"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.7"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="temperatureSensor.temperature_out -> airConditionerController.airconditionerThread.temperature_in" complete="true" kind="portConnection" destination="/0/@componentInstance.14/@componentInstance.0/@featureInstance.1" source="/0/@componentInstance.7/@featureInstance.0">
@@ -1867,10 +1864,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.7"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.8"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.7/@featureInstance.1" destination="/0/@componentInstance.1" reverse="true">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.7"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.8"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="temperatureSwitch.switch_out -> airConditionerController.airconditionerThread.switch_temperature_in" complete="true" kind="portConnection" destination="/0/@componentInstance.14/@componentInstance.0/@featureInstance.2" source="/0/@componentInstance.8/@featureInstance.0">
@@ -1889,10 +1886,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.8"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.9"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.1" destination="/0/@componentInstance.1" reverse="true">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.8"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.9"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="temperatureSwitch.ethernet_access -> ethernet" complete="true" kind="accessConnection" destination="/0/@componentInstance.0" source="/0/@componentInstance.8/@featureInstance.2">
@@ -1903,10 +1900,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.9"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.10"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.2" destination="/0/@componentInstance.0" reverse="true">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.9"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.10"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="airConditioner.hc_access -> homeConnection" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.9/@featureInstance.1">
@@ -1917,10 +1914,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.10"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.11"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.9/@featureInstance.1" destination="/0/@componentInstance.1" reverse="true">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.10"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.11"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="alarmSwitch.switch_out -> alarmController.alarmThread.alarm_switch_in" complete="true" kind="portConnection" destination="/0/@componentInstance.15/@componentInstance.0/@featureInstance.1" source="/0/@componentInstance.10/@featureInstance.0">
@@ -1939,10 +1936,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.11"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.12"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.10/@featureInstance.1" destination="/0/@componentInstance.1" reverse="true">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.11"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.12"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="alarmSwitch.ethernet_access -> ethernet" complete="true" kind="accessConnection" destination="/0/@componentInstance.0" source="/0/@componentInstance.10/@featureInstance.2">
@@ -1953,10 +1950,10 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.12"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.13"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.10/@featureInstance.2" destination="/0/@componentInstance.0" reverse="true">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.12"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.13"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="speaker.hc_access -> homeConnection" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.11/@featureInstance.1">
@@ -1967,10 +1964,24 @@
             <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.13"/>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.14"/>
       </ownedPropertyAssociation>
       <connectionReference context="/0" source="/0/@componentInstance.11/@featureInstance.1" destination="/0/@componentInstance.1" reverse="true">
-        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.13"/>
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.14"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="ram.hc_access -> homeConnection" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.12/@featureInstance.0">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0" source="/0/@componentInstance.12/@featureInstance.0" destination="/0/@componentInstance.1" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedAccessConnection.1"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="lightController.switchThread.light_percent_out -> lightDevice.light_in" complete="true" kind="portConnection" destination="/0/@componentInstance.5/@featureInstance.0" source="/0/@componentInstance.13/@componentInstance.1/@featureInstance.2">
