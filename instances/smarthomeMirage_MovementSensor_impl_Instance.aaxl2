@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance">
+  <instance:SystemInstance name="MovementSensor_impl_Instance" category="device">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="0.3">
+          <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedPropertyAssociation.2"/>
+    </ownedPropertyAssociation>
+    <featureInstance name="movement_out" direction="out" type="/1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="hc_access" category="busAccess" type="/2">
+      <feature xsi:type="aadl2:BusAccess" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedBusAccess.0"/>
+    </featureInstance>
+    <classifier xsi:type="aadl2:DeviceImplementation" href="../smarthomeMirage.aadl#smarthomeMirage.MovementSensor.impl"/>
+    <systemOperationMode name="No Modes"/>
+    <componentImplementation xsi:type="aadl2:DeviceImplementation" href="../smarthomeMirage.aadl#smarthomeMirage.MovementSensor.impl"/>
+  </instance:SystemInstance>
+  <instance:ComponentInstance name="smarthomeMirage::IsMovement" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../smarthomeMirage.aadl#smarthomeMirage.IsMovement"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="smarthomeMirage::HomeConnection" category="bus">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="0.15">
+          <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.46/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthCapacity"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="1000.0">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.46/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:BusType" href="../smarthomeMirage.aadl#smarthomeMirage.HomeConnection"/>
+  </instance:ComponentInstance>
+</xmi:XMI>

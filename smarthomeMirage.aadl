@@ -148,7 +148,7 @@ public
             light_percent_out: out data port LightPercentage;
         properties
             SEI::MIPSBudget => 10.0 mips;
-            Thread_Properties::Dispatch_Protocol => Periodic; -- TODO check --
+            Thread_Properties::Dispatch_Protocol => Periodic;
 			Timing_Properties::Period => 1000ms;
     end LightSensorsThread;
 
@@ -162,7 +162,7 @@ public
             light_percent_out: out data port LightPercentage;
         properties
             SEI::MIPSBudget => 5.0 mips;
-            Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
+            Thread_Properties::Dispatch_Protocol => Aperiodic;
             Timing_Properties::Period => 50ms;
     end LightSwitchThread;
 
@@ -178,7 +178,7 @@ public
             temperature_adjustment_out: out data port TemperatureAdjustment;
         properties
             SEI::MIPSBudget => 15.0 mips;
-            Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
+            Thread_Properties::Dispatch_Protocol => Aperiodic;
 			Timing_Properties::Period => 50ms;
     end AirConditionerThread;
 
@@ -193,7 +193,7 @@ public
             turn_on_out: out data port TurnOn;
         properties
             SEI::MIPSBudget => 5.0 mips;
-            Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
+            Thread_Properties::Dispatch_Protocol => Aperiodic;
             Timing_Properties::Period => 100ms; 
     end AlarmThread;
 
@@ -207,206 +207,276 @@ public
     device MovementSensor
     	features
     		movement_out: out data port IsMovement;
-    		-- TODO bus access -- 
+			hc_access: requires bus access HomeConnection;
     	properties
     		SEI::GrossWeight => 0.3 kg;
 			Timing_Properties::Period => 50ms;
-			Thread_Properties::Dispatch_Protocol => Periodic; -- TODO check --
+			Thread_Properties::Dispatch_Protocol => Periodic;
     end MovementSensor;
+
+	device implementation MovementSensor.impl
+	end MovementSensor.impl;
 
     device LuminanceSensor
 		features 
 			luminance_out: out data port LightIntensity;
-			-- TODO bus access --
+			hc_access: requires bus access HomeConnection;
     	properties
     		SEI::GrossWeight => 0.2 kg;
 			Timing_Properties::Period => 50ms;
-			Thread_Properties::Dispatch_Protocol => Periodic; -- TODO check --
+			Thread_Properties::Dispatch_Protocol => Periodic;
     end LuminanceSensor;
+	
+	device implementation LuminanceSensor.impl
+	end LuminanceSensor.impl;
 
     device LightSwitch
     	features
     		switch_out: out data port SwitchLight;
-    		-- TODO bus access --
+			hc_access: requires bus access HomeConnection;
+			ethernet_access: requires bus access Ethernet;
     	properties
     		SEI::GrossWeight => 0.1 kg;
 			-- Timing_Properties::Period => 50ms;
-			Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
+			Thread_Properties::Dispatch_Protocol => Aperiodic;
     end LightSwitch;
+
+	device implementation LightSwitch.impl
+	end LightSwitch.impl;
 
     device LightDevice
     	features 
     		light_in: in data port LightPercentage;
-    		-- TODO bus access --
+			hc_access: requires bus access HomeConnection;
     	properties
 			SEI::GrossWeight => 0.2 kg;
 			-- Timing_Properties::Period => 50ms;
-			Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
+			Thread_Properties::Dispatch_Protocol => Aperiodic;
     end LightDevice;
 
+	device implementation LightDevice.impl
+	end LightDevice.impl;
+    
 
     device HumiditySensor
     	features
     		humidity_out: out data port Humidity;
-    		-- TODO bus access --
+			hc_access: requires bus access HomeConnection;
     	properties
     		SEI::GrossWeight => 0.1 kg;
     		Timing_Properties::Period => 50ms;
-			Thread_Properties::Dispatch_Protocol => Periodic; -- TODO check
-
+			Thread_Properties::Dispatch_Protocol => Periodic;
     end HumiditySensor;
+
+	device implementation HumiditySensor.impl
+	end HumiditySensor.impl;
 
     device TemperatureSensor
 		features
     		temperature_out: out data port Temperature;
-    		-- TODO bus access --
+			hc_access: requires bus access HomeConnection;
     	properties
     		SEI::GrossWeight => 0.2 kg;
     		Timing_Properties::Period => 50ms;
-			Thread_Properties::Dispatch_Protocol => Periodic; -- TODO check
+			Thread_Properties::Dispatch_Protocol => Periodic;
     end TemperatureSensor;
+
+	device implementation TemperatureSensor.impl
+	end TemperatureSensor.impl;
 
     device TemperatureSwitch
 		features
     		switch_out: out data port SwitchTemperature;
-    		-- TODO bus access --
+			hc_access: requires bus access HomeConnection;
+			ethernet_access: requires bus access Ethernet;
     	properties
     		SEI::GrossWeight => 0.1 kg;
 			-- Timing_Properties::Period => 50ms;
-			Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
+			Thread_Properties::Dispatch_Protocol => Aperiodic;
     end TemperatureSwitch;
+
+    device implementation TemperatureSwitch.impl
+    end TemperatureSwitch.impl;
 
     device AirConditioner
 		features 
     		temperature_in: in data port TemperatureAdjustment;
-    		-- TODO bus access --
+			hc_access: requires bus access HomeConnection;
     	properties
 			SEI::GrossWeight => 8.0 kg;
 			-- Timing_Properties::Period => 50ms;
-			Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
+			Thread_Properties::Dispatch_Protocol => Aperiodic;
     end AirConditioner;
+
+    device implementation AirConditioner.impl
+    end AirConditioner.impl;
 
 
     device AlarmSwitch
 		features
     		switch_out: out data port SwitchAlarm;
-    		-- TODO bus access --
+			hc_access: requires bus access HomeConnection;
+			ethernet_access: requires bus access Ethernet;
     	properties
     		SEI::GrossWeight => 0.1 kg;
 			-- Timing_Properties::Period => 50ms;
-			Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
+			Thread_Properties::Dispatch_Protocol => Aperiodic;
     end AlarmSwitch;
+
+    device implementation AlarmSwitch.impl
+    end AlarmSwitch.impl;
 
     device Speaker
 		features 
     		turn_on_in: in data port TurnOn;
-    		-- TODO bus access --
+			hc_access: requires bus access HomeConnection;
     	properties
 			SEI::GrossWeight => 1.0 kg;
 			-- Timing_Properties::Period => 50ms;
-			Thread_Properties::Dispatch_Protocol => Aperiodic; -- TODO check --
+			Thread_Properties::Dispatch_Protocol => Aperiodic;
     end Speaker;
+
+    device implementation Speaker.impl
+    end Speaker.impl;
 	
 	-- end devices --
 	
 	-- bus, memory, processor --
 	
-	-- TODO --
+	bus Ethernet
+		properties
+			SEI::GrossWeight => 0.15kg;
+			SEI::BandWidthCapacity => 100.0 Mbps;
+	end Ethernet;
+
+	bus implementation Ethernet.impl
+	end Ethernet.impl;
+	
+	bus HomeConnection
+	properties
+			SEI::GrossWeight => 0.15kg;
+			SEI::BandWidthCapacity => 1000.0 Mbps;
+	end HomeConnection;
+
+	bus implementation HomeConnection.impl
+	end HomeConnection.impl;
+
+	memory RAM
+		features
+			hc_access: requires bus access HomeConnection;
+		properties
+			SEI::GrossWeight => 0.03kg;
+	end RAM;
+
+	memory implementation RAM.impl
+	end RAM.impl;
+	
+	processor CPU
+	  features
+	    hc_access: requires bus access HomeConnection;
+	  properties
+			SEI::MIPSCapacity => 200.0 mips;
+			SEI::GrossWeight => 0.1 kg;
+	end CPU;
+
+	processor implementation CPU.impl
+		subcomponents
+			ram: memory RAM;
+	end CPU.impl;
 	
 	-- end bus, memory, processor --
 	
 	-- system --
 	
-	-- TODO --
+	system SmartHomeMirage
+	end SmartHomeMirage;
 	
+	system implementation SmartHomeMirage.impl
+		
+		subcomponents
+            lightController: process LightController.impl;
+            airConditionerController: process AirConditionerController.impl;
+            alarmController: process AlarmController.impl;
+
+            ethernet: bus Ethernet.impl;
+            homeConnection: bus HomeConnection.impl;
+            ram: memory RAM.impl;
+            cpu: processor CPU.impl;
+
+            movementSensor: device MovementSensor.impl;
+            luminanceSensor: device LuminanceSensor.impl;
+            lightSwitch: device LightSwitch.impl;
+            lightDevice: device LightDevice.impl;
+
+            humiditySensor: device HumiditySensor.impl;
+            temperatureSensor: device TemperatureSensor.impl;
+            temperatureSwitch: device TemperatureSwitch.impl;
+            airConditioner: device AirConditioner.impl;
+
+            alarmSwitch: device AlarmSwitch.impl;
+            speaker: device Speaker.impl;
+        connections
+            c1: port movementSensor.movement_out -> lightController.receive_movement_in;
+            c2: port luminanceSensor.luminance_out -> lightController.receive_luminance_in;
+            c3: port lightSwitch.switch_out -> lightController.receive_switch_in;
+            c4: port lightController.send_light_percent_out -> lightDevice.light_in;
+
+            c5: port humiditySensor.humidity_out -> airConditionerController.receive_humidity_in;
+            c6: port temperatureSensor.temperature_out -> airConditionerController.receive_temperature_in;
+            c7: port temperatureSwitch.switch_out -> airConditionerController.receive_switch_temperature_in;
+            c8: port airConditionerController.send_temperature_adjustment_out -> airConditioner.temperature_in;
+
+            c9: port movementSensor.movement_out -> alarmController.receive_movement_in;
+            c10: port alarmSwitch.switch_out -> alarmController.receive_switch_in;
+            c11: port alarmController.send_turn_on_out -> speaker.turn_on_in;
+
+            -- bus connections --
+            processor_bus: bus access homeConnection <-> cpu.hc_access;
+            
+            movementsensor_bus: bus access homeConnection <-> movementSensor.hc_access;
+            luminancesensor_bus: bus access homeConnection <-> luminanceSensor.hc_access;
+            lightswitch_bus: bus access homeConnection <-> lightSwitch.hc_access;
+            lightswitch_ethernet: bus access ethernet <-> lightSwitch.ethernet_access;
+            lightdevice_bus: bus access homeConnection <-> lightDevice.hc_access;
+
+            humiditysensor_bus: bus access homeConnection <-> humiditySensor.hc_access;
+            temperaturesensor_bus: bus access homeConnection <-> temperatureSensor.hc_access;
+            temperatureswitch_bus: bus access homeConnection <-> temperatureSwitch.hc_access;
+            temperatureswitch_ethernet: bus access ethernet <-> temperatureSwitch.ethernet_access;
+            airconditioner_bus: bus access homeConnection <-> airConditioner.hc_access;
+            
+            alarmswitch_bus: bus access homeConnection <-> alarmSwitch.hc_access;
+            alarmswitch_ethernet: bus access ethernet <-> alarmSwitch.ethernet_access;
+            speaker_bus: bus access homeConnection <-> speaker.hc_access;
+        
+        properties
+        --  Examples:
+        --  Actual_Connection_Binding => (reference(systemBus)) applies to cooler_bus;
+        --  Actual_Processor_Binding => (reference(mainProcessor)) applies to AirConditioningControlProcess;
+	    	Actual_Connection_Binding => (reference(HomeConnection)) applies to processor_bus;
+            
+			Actual_Connection_Binding => (reference(HomeConnection)) applies to movementsensor_bus;
+			Actual_Connection_Binding => (reference(HomeConnection)) applies to luminancesensor_bus;
+			Actual_Connection_Binding => (reference(HomeConnection)) applies to lightswitch_bus;
+            Actual_Connection_Binding => (reference(Ethernet)) applies to lightswitch_ethernet;
+			Actual_Connection_Binding => (reference(HomeConnection)) applies to lightdevice_bus;
+            
+			Actual_Connection_Binding => (reference(HomeConnection)) applies to humiditysensor_bus;
+			Actual_Connection_Binding => (reference(HomeConnection)) applies to temperaturesensor_bus;
+			Actual_Connection_Binding => (reference(HomeConnection)) applies to temperatureswitch_bus;
+            Actual_Connection_Binding => (reference(Ethernet)) applies to temperatureswitch_ethernet;
+			Actual_Connection_Binding => (reference(HomeConnection)) applies to airconditioner_bus;
+            
+			Actual_Connection_Binding => (reference(HomeConnection)) applies to alarmswitch_bus;
+			Actual_Connection_Binding => (reference(Ethernet)) applies to alarmswitch_ethernet;
+			Actual_Connection_Binding => (reference(HomeConnection)) applies to speaker_bus;
+		
+			Actual_Processor_Binding => (reference(cpu)) applies to lightController;
+			Actual_Processor_Binding => (reference(cpu)) applies to airConditionerController;
+			Actual_Processor_Binding => (reference(cpu)) applies to alarmController;
+			
+	end SmartHomeMirage.impl;
+		
 	-- end system -- 
 
-
--- TODO delete all below when done --    
---    -- Movement Sensor Interface
---    device Movement_Sensor
---    features
---        movement_out: out data port IsMovement;
---    end Movement_Sensor;
---
---    -- Luminance Sensor Interface
---    device Luminance_Sensor
---    features
---        luminance_out: out data port LightIntensity;
---    end Luminance_Sensor;
---
---    -- Switch Device Interface
---    device Switch_Device
---    features
---        switch_out: out data port SwitchType;
---    end Switch_Device;
---
---    -- Light Controller Interface
---    device Light_Controller
---    features
---        movement_in: in data port IsMovement;
---        luminance_in: in data port LightIntensity;
---        switch_in: in data port SwitchType;
---        light_out: out data port LightPercentage;
---    end Light_Controller;
---
---    -- Light Switch Interface
---    device Light_Switch
---    features
---        percentage_in: in data port LightPercentage;
---    end Light_Switch;
---    
---    
---    -- Processor
---    processor Main_Processor
---    end Main_Processor;
---
---    processor implementation Main_Processor.impl
---    end Main_Processor.impl;
---
---    -- Bus
---    bus System_Bus
---    end System_Bus;
---
---    bus implementation System_Bus.impl
---    end System_Bus.impl;
---
---    -- Memory
---    memory Main_Memory
---    end Main_Memory;
---
---    memory implementation Main_Memory.impl
---    end Main_Memory.impl;
---    
---    
---    system Intelligent_House
---    end Intelligent_House;
---
---    system implementation Intelligent_House.impl
---    subcomponents
---        -- Sensors and devices
---        movement_sensor: device Movement_Sensor;
---        luminance_sensor: device Luminance_Sensor;
---        switch_device: device Switch_Device;
---        light_controller: device Light_Controller;
---        light_switch: device Light_Switch;
---
---        -- Hardware components
---        Main_Proc : processor Main_Processor.impl;
---        Main_Bus: bus System_Bus.impl;
---        Main_Memory: memory Main_Memory.impl;
---    connections
---        -- Connect sensors and switch to the controller
---        movement_conn: port movement_sensor.movement_out -> light_controller.movement_in;
---        luminance_conn: port luminance_sensor.luminance_out -> light_controller.luminance_in;
---        switch_conn: port switch_device.switch_out -> light_controller.switch_in;
---
---        -- Connect controller to the light switch
---        light_conn: port light_controller.light_out -> light_switch.percentage_in;
---
---        -- Hardware connections
---        -- proc_bus_conn: bus access Main_Proc -> Main_Bus;
---        -- mem_bus_conn: bus access Main_Memory -> Main_Bus;
---    end Intelligent_House.impl;
---    
 end smarthomeMirage;
