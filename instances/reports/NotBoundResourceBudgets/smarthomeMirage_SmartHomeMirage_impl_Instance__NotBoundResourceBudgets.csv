@@ -1,7 +1,7 @@
 Not Bound Resource Budget Analysis Report
 
 Resource Summary: 
-  MIPS capacity 200,000 MIPS : MIPS budget 35,000 MIPS
+  MIPS capacity 100,000 MIPS : MIPS budget 35,000 MIPS
   1 out of 1 with MIPS capacity
   7 out of 7 with MIPS budget
 
@@ -10,8 +10,8 @@ Resource Summary:
 Detailed Processor MIPS Capacity Report 
 
 Component,Capacity
-processor cpu, 200,000 MIPS,
-Total, 200,000 MIPS,
+processor cpu, 100,000 MIPS,
+Total, 100,000 MIPS,
 
 
 Detailed MIPS Budget Report 

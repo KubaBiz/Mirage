@@ -1,3 +1,0 @@
-Check connection binding consistency Report
-
-ERROR:  sensorsThread.light_percent_out -> switchThread.light_percent_in: Hardware (processor or device) of connection source and destination are not physically connected by bus.

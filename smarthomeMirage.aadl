@@ -376,8 +376,10 @@ public
 	processor CPU
 	  features
 	    hc_access: requires bus access HomeConnection;
-	  properties
-			SEI::MIPSCapacity => 200.0 mips;
+		properties
+			Clock_Period => 1 ms;
+			Timing_Properties::Processor_Capacity => 5.0 mips;
+			SEI::MIPSCapacity => 100.0 mips;
 			SEI::NetWeight => 0.1 kg;
 	end CPU;
 
@@ -472,6 +474,9 @@ public
 			Actual_Processor_Binding => (reference(cpu)) applies to lightController;
 			Actual_Processor_Binding => (reference(cpu)) applies to airConditionerController;
 			Actual_Processor_Binding => (reference(cpu)) applies to alarmController;
+			
+			SEI::WeightLimit => 20.0kg;
+			SEI::MIPSCapacity => 120.0 mips;
 			
 	end SmartHomeMirage.impl;
 		
