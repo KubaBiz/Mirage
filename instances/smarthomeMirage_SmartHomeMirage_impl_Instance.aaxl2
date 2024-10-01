@@ -8,7 +8,7 @@
           <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
         </ownedValue>
       </ownedValue>
-      <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.18"/>
+      <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.19"/>
     </ownedPropertyAssociation>
     <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
       <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSCapacity"/>
@@ -17,7 +17,7 @@
           <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
         </ownedValue>
       </ownedValue>
-      <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.19"/>
+      <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.20"/>
     </ownedPropertyAssociation>
     <componentInstance name="ethernet" category="bus">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -1006,6 +1006,15 @@
         <classifier xsi:type="aadl2:ThreadImplementation" href="../smarthomeMirage.aadl#smarthomeMirage.LightSwitchThread.impl"/>
       </componentInstance>
       <connectionInstance name="sensorsThread.light_percent_out -> switchThread.light_percent_in" complete="true" kind="portConnection" destination="/0/@componentInstance.13/@componentInstance.1/@featureInstance.1" source="/0/@componentInstance.13/@componentInstance.0/@featureInstance.2">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPropertyAssociation.18"/>
+        </ownedPropertyAssociation>
         <connectionReference context="/0/@componentInstance.13" source="/0/@componentInstance.13/@componentInstance.0/@featureInstance.2" destination="/0/@componentInstance.13/@componentInstance.1/@featureInstance.1">
           <connection xsi:type="aadl2:PortConnection" href="../smarthomeMirage.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.3"/>
         </connectionReference>

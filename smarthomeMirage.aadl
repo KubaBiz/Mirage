@@ -475,6 +475,8 @@ public
 			Actual_Processor_Binding => (reference(cpu)) applies to airConditionerController;
 			Actual_Processor_Binding => (reference(cpu)) applies to alarmController;
 			
+			Actual_Connection_Binding => (reference(HomeConnection)) applies to lightController.c4;
+			
 			SEI::WeightLimit => 20.0kg;
 			SEI::MIPSCapacity => 120.0 mips;
 			
